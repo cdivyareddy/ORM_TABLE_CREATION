@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    h1{
+        background-color: black;
+        color: aliceblue;
+    }
+   
+   
+</style>
+<body>
+    <center>
+    <h1 >equi_joins</h1>
+    <table border="3px" class="table">
+    <tr>
+        <th>empno</th>
+        <th>ename</th>
+        <th>sal</th>
+        <th>hiredate</th>
+        <th>mgr</th>
+        <th>comm</th>
+        <th>deptno</th>
+        <th>dname</th>
+        <th>dloc</th>
+    </tr>
+    {% for edo in LEDO %}
+    <tr>
+    <td>{{edo.Empno}}</td>
+    <td>{{edo.Ename}}</td>
+    <td>{{edo.Sal}}</td>
+    <td>{{edo.Hiredate}}</td>
+    <td>{{edo.Mgr}}</td>
+    <td>{{edo.Comm}}</td>
+    <td>{{edo.Deptno.Deptno}}</td>
+    <td>{{edo.Deptno.Dname}}</td>
+    <td>{{edo.Deptno.Dloc}}</td>
+    </tr>
+    {% endfor %}
+  
+    </table>
+    </center>
+    
+</body>
+</html>

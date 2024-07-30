@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    h1{
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+</head>
+<body>
+    <center>
+        <h1>emp_de_mgr</h1>
+        <table border="3px" class="table">
+            <tr class="bg-info">
+                <th>employeename</th>
+                <th>salary</th>
+                <th>hiredate</th>
+                <th>deptname</th>
+                <th>managername</th>
+            </tr>
+            {% for edm in edmo %}
+            <tr>
+                <td>{{edm.Ename}}</td>
+                <td>{{edm.Sal}}</td>
+                <td>{{edm.Hiredate}}</td>
+                <td>{{edm.Deptno.Dname}}</td>
+                <td>{{edm.Mgr.Ename}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

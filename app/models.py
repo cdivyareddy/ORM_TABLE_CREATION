@@ -6,6 +6,11 @@ class Dept(models.Model):
     Dname=models.CharField(max_length=100)
     Dloc=models.CharField(max_length=100)
 
+
+def __str__(self):
+    return self.Dname
+
+
 class Emp(models.Model):
     Empno=models.IntegerField(primary_key=True)
     Ename=models.CharField(max_length=100)
@@ -15,6 +20,9 @@ class Emp(models.Model):
     Hiredate=models.DateField(auto_now=True)
     Deptno=models.ForeignKey(Dept,on_delete=models.CASCADE)
     Mgr=models.ForeignKey('self',on_delete=models.SET_NULL,null=True,blank=True)
+
+def __str__(self):
+    return self.Job
 
 class Salgrade(models.Model):
     grade=models.IntegerField(max_length=100)
